@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Create Account Step1</title>
+    <% if(htmlWebpackPlugin.options.mode == 'development'){   %>
+    <!--#include file="/SystemFragment/global/pc_global_css_js.html" -->
+    <% }else{ %>
+    <% } %>
+    <script src="https://www.recaptcha.net/recaptcha/api.js?hl=en" async defer></script>
+</head>
+<body>
+    <% if(htmlWebpackPlugin.options.mode == 'development'){   %>
+    <!--#include file="/SystemFragment/account/register/progress.html" -->
+    <% }else{ %>
+    <!--%%#include file="/SystemFragment/account/register/progress.html" -->
+    <% } %>
+    <div class="rectangle-copy">
+        <div class="register-title">
+            <div class="register-title-row">
+                <div class="current-timeline">1</div>
+                <div class="title-text">Create Your Lenovo ID</div>
+            </div>
+            <div class="title-bottom-line"></div>
+        </div>
+        <div class="tip_box flex" style="display: none;">
+            <div class="tip_logo">
+                <img src="https://p1-ofp.static.pub/fes/cms/2020/12/08/iuq9lc372cb6f68hns6zga1w6wdkb7816066.png" alt="">
+            </div>
+            <div class="tip_text">Invalid verification codes!</div>
+        </div>
+
+        <div class="rectangle-copy-content">
+
+            <form class="register-main">
+                <div class="register-content">
+                    <div class="register-input">
+                        <div class="text-field-general-input-default">
+                            <div class="text-input-content">
+                                <input leblur='blurEmail' id="uEmail" name="uEmail" autocomplete="off"/>
+                                <label class="label">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="a-confirmation-email">
+                            A confirmation email will be sent to this address yo verity your
+                            registration
+                            <input type="button" leclick="testProxy" value="bind" />
+                        </div>
+                    </div>
+                    <div class="register-input">
+                        <div class="text-field-general-input-default">
+                            <div class="text-input-content">
+                                <input leblur='blurFName' id="uFname" name="uFname" autocomplete="off"/>
+                                <label class="label">First Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-input">
+                        <div class="text-field-general-input-default">
+                            <div class="text-input-content">
+                                <input leblur='blurLName' id="uLname" name="uLname" autocomplete="off"/>
+                                <label class="label">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-input">
+                        <div class="text-field-general-input-default flex">
+                            <div class="label_input">
+                                <div class="text-input-content">
+                                    <input leblur='inputPwd' type="password" id="upwd" autocomplete="off" name="upwd" class="upwd password" />
+                                    <label class="label">Password</label>
+                                </div>
+                            </div>
+                            <div class="icon-arrow-dowm-icon-account-h tyepIsPsd" leClick="showPassword">
+                                <img class="tyepIsPsdImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/f0d7j0p0lxbre122qsspwjh5pk937l815945.png" />
+                                <img class="tyepIsTextImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/n1l076tu5utjz6lwgfuqd57g5bn1pr686689.png" />
+                                <img class="checkedImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/rclkmr5tiucruw6d0rxi868a0ewvw9620632.jpg"/>
+                            </div>
+                        </div>
+                        <div class="dropdownBox">
+                            <p class="hintText">Password must have at least</p>
+                            <ul class="msg">
+                                <li class="clearfix" ptag='step1'>
+                                    <span class="icon fl"></span>
+                                    <span class="text">8-20 characters</span>
+                                </li>
+                                <li class="clearfix" ptag='step2'>
+                                    <span class="icon fl"></span>
+                                    <span class="text">Include two of the following: letters, numbers, and
+                                        symbols($!#&)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="register-input">
+                        <div class="text-field-general-input-default flex">
+                            <div class="label_input">
+                                <div class="text-input-content">
+                                    <input leblur='blurCPwd' type="password" id="cpwd" name="cpwd" autocomplete="off"/>
+                                    <label class="label">Confirm Password</label>
+                                </div>
+                            </div>
+                            <div class="icon-arrow-dowm-icon-account-h tyepIsPsd" leClick="showConfirmPassword">
+                                <img class="tyepIsPsdImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/f0d7j0p0lxbre122qsspwjh5pk937l815945.png" />
+                                <img class="tyepIsTextImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/n1l076tu5utjz6lwgfuqd57g5bn1pr686689.png" />
+                                <img class="checkedImg" src="https://p1-ofp.static.pub/fes/cms/2020/12/08/rclkmr5tiucruw6d0rxi868a0ewvw9620632.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-sign">
+                    <div class="register-sign-title">
+                        Join these great Lenovo Programs Today
+                    </div>
+                    <div class="checkbox-email-sign-up-btn">
+                        <div class="checkbox-email-sign-up flex">
+                            <div class="checkbox-email-sign-up-row">
+                                <div class="checkbox-default-icon-selector">
+                                    <input leclick="emailSignup" class="subscriber_checkbox" type="checkbox" />
+                                </div>
+                            </div>
+                            <div class="checkbox_email_text">
+                                <div class="checkbox-email-sign-up-row-text">
+                                    Lenovo Email Signup
+                                </div>
+                                <div class="checkbox-email-sign-up-desc">
+                                    Sign up today & receive exclusive offers, discounts, & deals
+                                    only available to our email subscribers.
+                                    <a href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-email-sign-up flex">
+                        <div class="checkbox-email-sign-up-row">
+                            <div class="checkbox-default-icon-selector">
+                                <input leclick="rewards" class="rewardsSignup_checkbox" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="checkbox_email_text">
+                            <div class="checkbox-email-sign-up-row-text">
+                                MyLenovo Rewards Signup
+                            </div>
+                            <div class="checkbox-email-sign-up-desc">
+                                Earn Rewards for everything you buy on Lenovo.com.
+                                <a href="#">Learn More</a>
+                            </div>
+                            <div class="checkbox-email-sign-up-desc">
+                                By joining, you agree to the
+                                <a href="#">Terms & Conditions</a> and you are opting in to
+                                receive Lenovo marketing communications via email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-email-sign-up checkbox-t-c flex">
+                        <div class="checkbox-email-sign-up-row">
+                            <div class="checkbox-default-icon-selector">
+                                <input leclick="accepted" class="agreePrivacy_checkbox" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="checkbox_email_text">
+                            <div class="checkbox-email-sign-up-desc">
+                                Yes, I have read and accepted the
+                                <a href="#">Terms of Use.</a> I confirm that I am 16 years of
+                                age or older
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-recaptcha" style="margin-top: 12px;"
+                        data-sitekey="6LcZ6O0ZAAAAANZ4T0DUoySPH4yG9XcJyjL5ZPm8" data-size="normal" data-theme="light">
+                    </div>
+
+                    <div class="please-read-our-glob" id="global">
+                        Please read our <a>Global Website Privacy Statement</a>
+                    </div>
+                </div>
+                <div class="register-btn-row flex">
+                    <div class="button-primary-button-secondar">
+                        <div class="button-button-structure">Cancel</div>
+                    </div>
+                    <div class="button-primary-disabled-button">
+                        <input class="button-button-structure" type="button" value="Creat Lenovo ID" disabled
+                            leclick="doRegister" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

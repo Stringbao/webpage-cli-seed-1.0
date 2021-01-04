@@ -1,0 +1,523 @@
+
+.rectangle-copy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1280px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding-bottom: 121px;
+	margin-bottom: 24px;
+	.rectangle-copy-content{
+		width: 1280px;
+	}
+
+	.register-title {
+		width: 1280px;
+		height: 55px;
+	
+		.register-title-row {
+		display: flex;
+		align-items: center;
+		height: 55px;
+	
+		.current-timeline {
+			width: 24px;
+			height: 24px;
+			line-height: 20px;
+			font-size: 14px;
+			font-weight: bold;
+			margin: 0 10px 0 19px;
+			border: 2px solid #008000;
+			border-radius: 50%;
+			text-align: center;
+		}
+		}
+	
+		.title-bottom-line {
+		height: 1px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #E3E3E3;
+		}
+	
+		.title-text {
+		color: #000000;
+		font-family: Lato;
+		font-size: 18px;
+		letter-spacing: 0;
+		}
+	}
+
+	.tip_box {
+		width: 394px;
+		min-height: 50px;
+		display: none;
+		box-sizing: border-box;
+		border: 1px solid #AF0200;
+		border-radius: 4px;
+		background-color: rgba(175, 2, 0, 0.05);
+		padding: 14.5px 13.5px 14.5px;
+		margin: 23.5px auto;
+		margin-bottom: 0;
+	
+			.tip_logo {
+			width: 20px;
+			height: 20px;
+			float: left;
+		
+			img {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	
+		.tip_text {
+			margin-left: 38px;
+		}
+	}
+
+	.register-main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 1280px;
+		margin: 0 auto;
+		.register-content,
+		.register-sign,
+		.register-btn-row,
+		.resgister_cancel_btn{
+			width: 394px;
+		}
+	
+		.register-content {
+			.register-input {
+				.icon-arrow-dowm-icon-account-h {
+					cursor: pointer;
+					width: 20px;
+					height: 17px;
+					margin: auto 0;
+					margin-left: 9px;
+					img {
+						width: 100%;
+						height: 100%;
+						&.tyepIsTextImg{
+							display: block;
+						}
+						&.tyepIsPsdImg{
+							display: none;
+						}
+						&.checkedImg{
+							display: none;
+						}
+					}
+					&.tyepIsPsd{
+						.tyepIsTextImg{
+							display: none;
+						}
+						.tyepIsPsdImg{
+							display: block;
+						}
+						.checkedImg{
+							display: none;
+						}
+					}
+					&.checked{
+						.tyepIsTextImg{
+							display: none;
+						}
+						.tyepIsPsdImg{
+							display: none;
+						}
+						.checkedImg{
+							display: block;
+						}
+					}
+				}
+				&.errorStatus .text-field-general-input-default {
+					background-color: rgba(175, 0, 0, 0.05);
+					border: 1px solid #af0200 !important;
+				}
+				.errorMsg {
+					position: relative;
+					top: -24px;
+					left: 16px;
+					width: 100%;
+					color: #AF0200;
+					font-size: 12px;
+				}
+			}
+	
+			.text-field-general-input-default {
+				height: 55px;
+				padding: 0 14px 0 12px;
+				margin-top: 24px;
+				box-sizing: border-box;
+				border: 1px solid #BCBCBC;
+				border-radius: 4px;
+				.label_input {
+					flex: 1;
+				}
+			}
+	
+			.text-input-content {
+				position: relative;
+				height: 100%;
+				input {
+					height: 53px;
+					width: 100%;
+					outline: none;
+					color: #000000;
+					font-size: 16px;
+					letter-spacing: 0;
+					padding-top: 20px;
+					box-sizing: border-box;
+					cursor: pointer;
+					&:-webkit-autofill {
+						box-shadow: 0 0 0px 1000px transparent inset !important;
+						transition: background-color 50000s ease-in-out 0s;
+						-webkit-text-fill-color: #000 !important;
+					}
+					&:focus + .label{
+						transform: translateY(0px) scale(1);
+						transform-origin: top left;
+						font-size: 12px;
+						line-height: 15px;
+						color: #545454;
+						pointer-events: none;
+						padding-top: 5px;
+						box-sizing: border-box;
+					}
+					& + .label.notnone{
+						transform: translateY(0px) scale(1);
+						transform-origin: top left;
+						font-size: 12px;
+						line-height: 15px;
+						color: #545454;
+						pointer-events: none;
+						padding-top: 5px;
+						box-sizing: border-box;
+					}
+				}
+				.label {
+					top: 0;
+					left: 0px;
+					position: absolute;
+					max-width: 90%;
+					height: 55px;
+					line-height: 55px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					// top: 50%;
+					// transform: translate(0, -50%);
+					white-space: nowrap;
+					pointer-events: none;
+					transform-origin: top left;
+					color: #545454;
+					font-size: 16px;
+					transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+					&:after {
+						margin-left: 12px;
+						color: #f56c6c;
+						font-size: 12px;
+						content: "*";
+					}
+				}
+			}
+	
+			.a-confirmation-email {
+				padding: 4px 9px 0 22px;
+				color: #757575;
+				font-size: 12px;
+				line-height: 15px;
+			}
+	
+			.dropdownBox{
+				height: 115px;
+				border-radius: 4px;
+				background-color: #FFFFFF;
+				box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+				padding-top: 13px;
+				padding-left: 12px;
+				padding-bottom: 19px;
+				margin-top: 0;
+				.hintText{
+					height: 17px;
+					color: #000000;
+					font-size: 14px;
+					letter-spacing: 0;
+					line-height: 17px;
+					margin-bottom: 12px;
+				}
+				li{
+					height: 15px;
+					color: #757575;
+					font-size: 12px;
+					font-weight: normal;
+					letter-spacing: 0;
+					line-height: 15px;
+					margin-bottom: 10px;
+				.icon{
+					width: 12px;
+					height: 12px;
+					background-color: #757575;
+					border-radius: 50%;
+					overflow: hidden;
+					display: block;
+					float: left;
+					margin-top: 2px;
+					background: url(//p1-ofp.static.pub/fes/cms/2020/12/08/qha3yiw410ad75fax9yg353xukjrco079436.svg) 0 0 no-repeat #757575;
+					background-size: 72% 60%;
+					background-position: center;
+				}
+				.text{
+					// width: 313px;
+					display: inline-block;
+					margin-left: 7px;
+					color: #757575;
+				}
+				&.correctMsg .text{
+					color: #008000;
+					font-weight: bold;
+				}
+				&.errortMsg .text{
+					color: #AF0200;
+					font-weight: bold;
+				}
+				&.correctMsg .icon{
+					background-color: #008000;
+				}
+				&.errortMsg .icon{
+					background-color: #AF0200;
+				}
+				}
+			}
+		}
+		
+		.register-sign {
+			margin-top: 36px;
+			.checkbox-email-sign-up-btn{
+				position: relative;
+				.our_glob{
+					display: none;
+					position: absolute;
+					top: 2px;
+					right: -100px;
+					font-size: 20px;
+					height: 24px;
+					line-height: 24px;
+					margin-left: 55px;
+					span{
+						display: inline-block;
+						color: #FF6A00;
+					}
+					.br_eu{
+						display: none;
+					}
+				}
+			}
+			.register-sign-title {
+				color: #000000;
+				font-family: Lato;
+				font-size: 20px;
+				letter-spacing: 0;
+				line-height: 24px;
+				margin-bottom: 16px;
+			}
+			.checkbox-email-sign-up {
+				background-color: #E6F4FA;
+			}
+			.checkbox-t-c,
+			.checkbox-email-sign-up-robot {
+				background-color: #f8f8f8;
+			}
+			.checkbox-t-c {
+				padding: 0 !important;
+				margin-top: 36px !important;
+				.checkbox_email_text {
+					padding: 12.5px 18.75px 29.5px 0;
+				}
+			}
+			.checkbox-email-sign-up,
+			.checkbox-email-sign-up-robot {
+				align-items: baseline;
+				box-sizing: border-box;
+				border: 1px solid #BCBCBC;
+				border-radius: 4px;
+				margin-top: 12px;
+				.checkbox-email-sign-up-desc {
+					margin-bottom: 12px;
+					font-size: 14px;
+					line-height: 17px;
+					a {
+						text-decoration: underline;
+						color: #0D5C91;
+						font-weight: bold;
+					}
+				}
+				.checkbox-email-sign-up-row-text {
+					margin-bottom: 8px;
+					color: #000;
+					font-size: 18px;
+					font-weight: bold;
+					line-height: 22px;
+				}
+		
+				.checkbox-email-sign-up-row {
+					.checkbox-default-icon-selector {
+						padding: 15px 11px 44px 16px;
+						input {
+							height: 16px;
+							width: 17px;
+						}
+					}
+				}
+				.checkbox_email_text {
+					flex: 1;
+				}
+			}
+			.checkbox-email-sign-up-robot {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 !important;
+				.checkbox-email-sign-up-row {
+					.checkbox-default-icon-selector {
+						padding: 21px 12px 19px 16px !important;
+					}
+				}
+		
+				.checkbox_email_text {
+					padding: 0 !important;
+				}
+		
+				.recaptcha-logo-svg {
+					height: 51px;
+					width: 51px;
+					margin: 0 8.5px 0 0;
+					background: darkblue;
+					cursor: pointer;
+				}
+		
+				.checkbox-email-sign-up-desc {
+					margin: 0;
+				}
+			}
+			.please-read-our-glob{
+				display: none;
+				height: 17px;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 17px;
+				margin-top: 12px;
+				margin-bottom: 25px;
+				a {
+					text-decoration: underline;
+					color: #0D5C91 !important;
+				}
+			}
+		}
+		
+		.register-btn-row {
+			margin-top: 36px;
+			height: 47px;
+
+			.button-primary-button-secondar,
+			.button-primary-disabled-button {
+				box-sizing: border-box;
+				height: 45px;
+				width: 184px;
+				border: 1px solid #EFEFEF;
+				border-radius: 4px;
+				overflow: hidden;
+				cursor: pointer;
+		
+				.button-button-structure {
+					width: 100%;
+					color: #817E7E;
+					font-size: 14px;
+					font-weight: bold;
+					text-align: center;
+					align-items: center;
+					line-height: 45px;
+					overflow: hidden;
+					cursor: pointer;
+					&:enabled{
+						color: #fff;
+						background-color: #0D5C91;
+					}
+					&:disabled{
+						color: #817E7E;
+						background-color: #EFEFEF;
+					}
+				}
+			}
+
+			.button-primary-button-secondar {
+				.button-button-structure{
+				background-color: #E6F4FA !important;
+					color: #0D5C91 !important;
+				}
+			}
+		
+			.button-primary-button-secondar {
+				border: 1px solid #0D5C91;
+				margin-right: 22.5px;
+				background-color: #E6F4FA;
+		
+				.button-button-structure {
+					color: #0D5C91;
+				}
+			}
+		}
+
+		.resgister_cancel_btn{
+			display: none;
+			margin-top: 35.5px;
+			.cancel_text{
+				font-size: 18px;
+				line-height: 22px;
+			}
+			.cancel_description{
+				margin-top: 11px;
+				font-size: 14px;
+				line-height: 17px;
+			}
+			.button_primary{
+				margin-top: 23.5px;
+				.btn{
+					display: inline-block;
+					height: 45px;
+					line-height: 45px;
+					border: 1px solid #0D5C91;
+					border-radius: 4px;
+					font-weight: bold;
+					text-align: center;
+				}
+				.btn_no{
+					font-size: 14px;
+					color: #0D5C91;
+					width: 50%;
+					background: #e7f5fa;
+				}
+				.btn_yes{
+					width: 50%;
+					color: #fff;
+					background: #0D5C91;
+					margin-left: 22px;
+				}
+			}
+		}
+	}
+
+	.error.errormsg{
+		position:relative;
+		left:24px;
+		width:100%;
+		color:#AF0200;
+		font-size:12px
+	}
+	#upwd-error{
+		left: 0;
+	}
+}

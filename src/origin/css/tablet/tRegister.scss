@@ -1,0 +1,22 @@
+@media screen and (max-width:1280px) and (min-width:750px) {
+        .rectangle-copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 726px !important;
+            margin: 0 auto;
+            background-color: #fff;
+            padding-bottom: 80px;
+            margin-bottom: 27px;
+            border-radius: 4px;
+
+        .register-title {
+            width: 726px;
+        }
+
+        .tabletMain {
+            width: 380px;
+            margin: 0 auto;
+        }
+    }
+}
