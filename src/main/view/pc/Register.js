@@ -19,18 +19,18 @@ export default class RegisterPCView extends BaseView{
             {dom:this._passwordEl, obj:this._model._password, key:"value"},
             {dom:this._confirmPasswordEl, obj:this._model._confirmPassword,key:"value"},
 
-            {dom:this._emailEl.parents('div.register-input'), obj:this._model._email, key:"errClass", ctype:"class"},
-            {dom:this._firstNameEl.parents('div.register-input'), obj:this._model._firstName, key:"errClass", ctype:"class"},
-            {dom:this._lastNameEl.parents('div.register-input'), obj:this._model._lastName, key:"errClass", ctype:"class"},
-            {dom:$('li[ptag=step1]'), obj:this._model._password.step1, key:"errClass", ctype:"class"},
-            {dom:$('li[ptag=step2]'), obj:this._model._password.step2, key:"errClass", ctype:"class"},
-            {dom:this._confirmPasswordEl.parents('div.register-input'), obj:this._model._confirmPassword, key:"errClass", ctype:"class"},
+            {dom:this._emailEl.parents('div.register-input'), obj:this._model._email, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
+            {dom:this._firstNameEl.parents('div.register-input'), obj:this._model._firstName, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
+            {dom:this._lastNameEl.parents('div.register-input'), obj:this._model._lastName, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
+            {dom:$('li[ptag=step1]'), obj:this._model._password.step1, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
+            {dom:$('li[ptag=step2]'), obj:this._model._password.step2, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
+            {dom:this._confirmPasswordEl.parents('div.register-input'), obj:this._model._confirmPassword, key:"errClass", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS},
         
-            {dom:$($(".button-button-structure")[1]), obj:this._model, key:"_isAgreePrivacy", ctype:"disabled"},
-            {dom:this._isSubscriberEl, obj:this._model, key:"_isSubscriber", ctype:"checked"},
-            {dom:this._rewardsSignupEl, obj:this._model, key:"_rewardsSignup", ctype:"checked"},
+            {dom:$($(".button-button-structure")[1]), obj:this._model, key:"_isAgreePrivacy", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.DISABLED},
+            {dom:this._isSubscriberEl, obj:this._model, key:"_isSubscriber", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED},
+            {dom:this._rewardsSignupEl, obj:this._model, key:"_rewardsSignup", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED},
 
-            {dom:$(".tip_box"), obj:this._model._validateAjax, key:"showError", ctype:"show"},
+            {dom:$(".tip_box"), obj:this._model._validateAjax, key:"showError", ctype:flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.SHOW},
             {dom:$(".tip_box .tip_text"), obj:this._model._validateAjax, key:"errorMsg"},
         ];
         arr.forEach(x=>{
@@ -106,6 +106,7 @@ class RegisterEvent{
     }
 
     blurEmail(sender, data){
+        debugger
         data.view._model.validateEmail();
         this.notNone(sender);
     }

@@ -19,21 +19,21 @@ export default {
         }).length > 0?true:false;
         return res;
     },
-    setValue(dom, val, type = CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
+    setValue(dom, val, type = flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
         let _dom = dom.get(0);
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS){
             dom.attr("class", val);
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.SHOW){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.SHOW){
             val?dom.show():dom.hide();
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED){
             _dom.checked = val;
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.SELECTED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.SELECTED){
             dom.val(val);
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
             let tagName = _dom.tagName.toLowerCase();
             let res = this.checkTagName(tagName);
             if(res.isHtmlTag){
@@ -46,17 +46,17 @@ export default {
                 $(_dom).val(val);
             }
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.DISABLED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.DISABLED){
             !val?dom.attr("disabled","disabled"):dom.removeAttr("disabled");
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.READONLY){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.READONLY){
             !val?dom.attr("readonly","readonly"):dom.removeAttr("readonly");
         }
     },
-    getValue(dom, type = CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
+    getValue(dom, type = flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
         let _dom = dom.get(0);
         let tagName = _dom.tagName.toLowerCase();
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.VALUE){
             let res = this.checkTagName(tagName);
             if(res.isHtmlTag){
                 return dom.html();
@@ -75,19 +75,19 @@ export default {
             }
             return "";
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.SHOW){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.SHOW){
             return _dom.style.display == "display"?true:false;
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.DISABLED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.DISABLED){
             return dom.attr("disabled")?false:true;
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.READONLY){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.READONLY){
             return dom.attr("readonly")?false:true;
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CHECKED){
             return _dom.checked;
         }
-        if(type == CONSTANT.OBSERVER_ELEMENT.TYPE.SELECTED){
+        if(type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.SELECTED){
             return dom.val(val);
         }
     }

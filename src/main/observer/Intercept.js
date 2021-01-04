@@ -27,7 +27,7 @@ export default class Intercept{
     }
 
     getValue(){
-        if(this._type == CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS){
+        if(this._type == flash_fe_core_tool.$CONSTANT.OBSERVER_ELEMENT.TYPE.CLASS){
             return this._value;
         }
         return DomHelper.getValue(this._doms[0], this._type);
