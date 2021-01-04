@@ -106,7 +106,6 @@ class RegisterEvent{
     }
 
     blurEmail(sender, data){
-        debugger
         data.view._model.validateEmail();
         this.notNone(sender);
     }
