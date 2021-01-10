@@ -7,6 +7,7 @@ export default class Engine {
         this._register = null;
     }
 
+    //model 
     notice(){
         
     }
@@ -18,6 +19,6 @@ export default class Engine {
         _registerView.setRootContainer(this._rootContainer);
         _registerView.render();
         this.notice();
-        flash_fe_core_tool.$customer_events.on(flash_fe_core_tool.$CONSTANT.ACCOUNT.REGISTER_PROGRESS_BAR).setIndex(0);
+        flash_fe_core_tool.$customer_events.on(flash_fe_core_tool.$CONSTANT.CUSTOMER_EVENT_KEY.ACCOUNT.REGISTER).setIndex(0);
     }
 }
