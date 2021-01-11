@@ -53,7 +53,6 @@ export default class RegisterPCView extends BaseView{
         this._isSubscriberEl = this._rootContainer.find(".subscriber_checkbox");
         this._rewardsSignupEl = this._rootContainer.find(".rewardsSignup_checkbox");
         this._isAgreePrivacyEl = this._rootContainer.find(".agreePrivacy_checkbox");
-        this._isRobotEl = this._rootContainer.find(".robot_checkbox");
 
         this.interceptList();
         this.registerEvent();
